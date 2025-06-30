@@ -25,7 +25,7 @@ class Solution:
 # First, i will try to traverse each element in the list
         for i in range(len(nums)):
 # This loop is setup so that i can traverse other elements except the one which we're traversing in first loop and check the sum of 2 elements (one which we're traversing in first loop and second which we're traversing in second loop) equals to the target or not. 
-            for j in range(i + 1, len(nums)-1):
+            for j in range(i + 1, len(nums)):
 # Condition to check the sum
                 if nums[i] + nums[j] == target:
                     return [i, j]
