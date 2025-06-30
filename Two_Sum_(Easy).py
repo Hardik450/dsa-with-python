@@ -24,9 +24,6 @@ class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
 # First, i will try to traverse each element in the list
         for i in range(len(nums)):
-# This is the condition without which my code can give error on reaching the exact length of the list while traversing each element so to avoid those errors i have used this condition to ignore it.
-            if i + 1 == len(nums):
-                break
 # This loop is setup so that i can traverse other elements except the one which we're traversing in first loop and check the sum of 2 elements (one which we're traversing in first loop and second which we're traversing in second loop) equals to the target or not. 
             for j in range(i + 1, len(nums)):
 # Condition to check the sum
