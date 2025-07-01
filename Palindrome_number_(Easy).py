@@ -26,7 +26,7 @@ class Solution:
 # Here, a is the reversed number to which we're initializing as 0 and storing original number in b.
         a = 0
         b = x
-# Number equals to or less than 0 ain't palindrome number.
+# Number less than 0 ain't palindrome number.
         if x < 0:
             return False
 # The loop takes input and assign 'a' with the sum of the remainder of the number and the product of 10 and a. Then, we will reduce x until it equals to zero.
