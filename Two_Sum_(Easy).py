@@ -20,6 +20,10 @@ Example 3:
 Input: nums = [3,3], target = 6
 Output: [0,1]
 """
+
+
+"""
+Method 1:-
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
 # First, i will try to traverse each element in the list
@@ -29,3 +33,13 @@ class Solution:
 # Condition to check the sum
                 if nums[i] + nums[j] == target:
                     return [i, j]
+"""
+# Method 2 (more optimize)
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        hashmap = {}
+        for i, num in enumerate(nums):
+            diff = target - num
+            if diff in hashmap:
+                return [hashmap[diff], i]
+            hashmap[num] = i
